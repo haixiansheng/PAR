@@ -1,0 +1,34 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 72),
+             ('train_epoch', 20),
+             ('height', 192),
+             ('width', 256),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', '1'),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU1 for training
+train set: PA100k trainval, test set: test
+Compose(
+    Pad(padding=10, fill=0, padding_mode=constant)
+    ColorJitter(brightness=[0.19999999999999996, 1.8], contrast=[0.19999999999999996, 1.8], saturation=[0.5, 1.5], hue=None)
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=(-45, 45), resample=False, expand=False)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+[0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0]
+imgs_len: 21320
+label_len: 21320
+[0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0]
+imgs_len: 1877
+label_len: 1877
+-------------------use cuda----------------- 

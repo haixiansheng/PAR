@@ -1,0 +1,65 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 72),
+             ('train_epoch', 20),
+             ('height', 192),
+             ('width', 256),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', ''),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(192, 256), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    ColorJitter(brightness=[0.19999999999999996, 1.8], contrast=[0.19999999999999996, 1.8], saturation=[0.5, 1.5], hue=None)
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=(-45, 45), resample=False, expand=False)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+[0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0]
+imgs_len: 22123
+label_len: 22123
+[0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0]
+imgs_len: 1877
+label_len: 1877
+resnet18!
+-------------------use cuda----------------- 
+2020-12-01_08:32:37, Step 19/308 in Ep 0, 0.15s  train_loss:6.4586
+2020-12-01_08:32:42, Step 39/308 in Ep 0, 0.15s  train_loss:5.2838
+2020-12-01_08:32:46, Step 59/308 in Ep 0, 0.15s  train_loss:4.1201
+2020-12-01_08:32:51, Step 79/308 in Ep 0, 0.15s  train_loss:4.4786
+2020-12-01_08:32:56, Step 99/308 in Ep 0, 0.14s  train_loss:4.4604
+2020-12-01_08:33:00, Step 119/308 in Ep 0, 0.14s  train_loss:4.3758
+2020-12-01_08:33:05, Step 139/308 in Ep 0, 0.14s  train_loss:4.0952
+2020-12-01_08:33:10, Step 159/308 in Ep 0, 0.15s  train_loss:4.0503
+2020-12-01_08:33:14, Step 179/308 in Ep 0, 0.15s  train_loss:3.6793
+2020-12-01_08:33:19, Step 199/308 in Ep 0, 0.15s  train_loss:3.7861
+2020-12-01_08:33:24, Step 219/308 in Ep 0, 0.15s  train_loss:3.5478
+2020-12-01_08:33:28, Step 239/308 in Ep 0, 0.15s  train_loss:4.2675
+2020-12-01_08:33:33, Step 259/308 in Ep 0, 0.12s  train_loss:4.3255
+2020-12-01_08:33:37, Step 279/308 in Ep 0, 0.12s  train_loss:3.6456
+2020-12-01_08:33:42, Step 299/308 in Ep 0, 0.13s  train_loss:3.6268
+2020-12-01_08:33:43, Step 307/308 in Ep 0, 0.04s  train_loss:5.2245
+--------------------
+Epoch 0, LR 0.08000000100000002, Train_Time 71.39s, Loss: 4.6521
+write epoch: 0 train information 
+Evaluation on test set, 
+ ma: 0.8417,  pos_recall: 0.7181 , neg_recall: 0.9654 
+ Acc: 0.7629, Prec: 0.8166, Rec: 0.8385, F1: 0.8175
+2020-12-01_08:33:46
+------------------------------------------------------------
+2020-12-01_08:33:51, Step 19/308 in Ep 1, 0.12s  train_loss:3.6874
+2020-12-01_08:33:56, Step 39/308 in Ep 1, 0.12s  train_loss:2.9909
+2020-12-01_08:34:00, Step 59/308 in Ep 1, 0.12s  train_loss:4.3509
+2020-12-01_08:34:04, Step 79/308 in Ep 1, 0.12s  train_loss:4.7321
+2020-12-01_08:34:09, Step 99/308 in Ep 1, 0.12s  train_loss:3.4734

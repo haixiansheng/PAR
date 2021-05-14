@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2bf1a648-2876-4517-9d25-c3ff5721e838" name="ATR">
+        <fileTransfer rootFolder="/home/tcj/project/PAR" accessType="SFTP" host="192.168.10.115" port="10020" sshConfigId="9c568679-b7b8-47bf-8f39-df2adea52148" sshConfig="root@192.168.10.115:10020 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

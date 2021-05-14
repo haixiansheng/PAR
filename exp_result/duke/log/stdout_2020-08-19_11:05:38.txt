@@ -1,0 +1,53 @@
+OrderedDict([('data_path', './data'),
+             ('dataset', 'duke'),
+             ('batch_size', 64),
+             ('num_workers', 4),
+             ('use_id', False),
+             ('lamba', 1.0),
+             ('debug', True),
+             ('train_epoch', 100),
+             ('height', 256),
+             ('width', 192),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', '2,3,4,5'),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU2,3,4,5 for training
+train set: duke trainval, test set: test
+2020-08-19_11:05:57, Step 19/534 in Ep 0, 0.24s  train_loss:12.3642
+2020-08-19_11:06:01, Step 39/534 in Ep 0, 0.23s  train_loss:9.8631
+2020-08-19_11:06:06, Step 59/534 in Ep 0, 0.23s  train_loss:9.3799
+2020-08-19_11:06:11, Step 79/534 in Ep 0, 0.25s  train_loss:8.9634
+2020-08-19_11:06:16, Step 99/534 in Ep 0, 0.23s  train_loss:8.9000
+2020-08-19_11:06:21, Step 119/534 in Ep 0, 0.23s  train_loss:8.8620
+2020-08-19_11:06:26, Step 139/534 in Ep 0, 0.24s  train_loss:7.7120
+2020-08-19_11:06:31, Step 159/534 in Ep 0, 0.23s  train_loss:8.6842
+2020-08-19_11:06:36, Step 179/534 in Ep 0, 0.24s  train_loss:7.6719
+2020-08-19_11:06:40, Step 199/534 in Ep 0, 0.23s  train_loss:8.1868
+2020-08-19_11:06:45, Step 219/534 in Ep 0, 0.23s  train_loss:7.7112
+2020-08-19_11:06:50, Step 239/534 in Ep 0, 0.23s  train_loss:7.5801
+2020-08-19_11:06:55, Step 259/534 in Ep 0, 0.23s  train_loss:9.3128
+2020-08-19_11:07:00, Step 279/534 in Ep 0, 0.23s  train_loss:7.5245
+2020-08-19_11:07:05, Step 299/534 in Ep 0, 0.24s  train_loss:7.1448
+2020-08-19_11:07:10, Step 319/534 in Ep 0, 0.23s  train_loss:7.2138
+2020-08-19_11:07:14, Step 339/534 in Ep 0, 0.23s  train_loss:7.4270
+2020-08-19_11:07:19, Step 359/534 in Ep 0, 0.24s  train_loss:8.6888
+2020-08-19_11:07:24, Step 379/534 in Ep 0, 0.23s  train_loss:7.3291
+2020-08-19_11:07:29, Step 399/534 in Ep 0, 0.23s  train_loss:7.1332
+2020-08-19_11:07:34, Step 419/534 in Ep 0, 0.23s  train_loss:8.3112
+2020-08-19_11:07:39, Step 439/534 in Ep 0, 0.23s  train_loss:7.4035
+2020-08-19_11:07:43, Step 459/534 in Ep 0, 0.23s  train_loss:7.6177
+2020-08-19_11:07:48, Step 479/534 in Ep 0, 0.23s  train_loss:7.3590
+2020-08-19_11:07:53, Step 499/534 in Ep 0, 0.25s  train_loss:8.3226
+2020-08-19_11:07:58, Step 519/534 in Ep 0, 0.24s  train_loss:7.0947
+2020-08-19_11:08:01, Step 533/534 in Ep 0, 0.24s  train_loss:6.8295
+--------------------
+Epoch 0, LR 0.1, Train_Time 130.41s, Loss: 8.6398
+write epoch: 0 train information 

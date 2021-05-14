@@ -1,0 +1,34 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 72),
+             ('train_epoch', 10),
+             ('height', 256),
+             ('width', 192),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', '7'),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU7 for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(256, 192), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    RandomCrop(size=(256, 192), padding=None)
+    RandomHorizontalFlip(p=0.5)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+imgs_len: 7064
+label_len: 7064
+imgs_len: 7064
+label_len: 7064
+-------------------use cuda----------------- 
+2020-10-21_07:12:48, Step 19/99 in Ep 0, 0.28s  train_loss:0.9224
+2020-10-21_07:13:12, Step 39/99 in Ep 0, 0.28s  train_loss:0.7511

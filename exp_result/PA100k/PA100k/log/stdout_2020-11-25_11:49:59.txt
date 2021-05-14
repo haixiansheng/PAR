@@ -1,0 +1,70 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 72),
+             ('train_epoch', 20),
+             ('height', 192),
+             ('width', 256),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', '1'),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU1 for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(192, 256), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    ColorJitter(brightness=[0.19999999999999996, 1.8], contrast=[0.19999999999999996, 1.8], saturation=[0.5, 1.5], hue=None)
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=(-45, 45), resample=False, expand=False)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+[0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0]
+imgs_len: 1136818
+label_len: 1136818
+[0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0]
+imgs_len: 1877
+label_len: 1877
+-------------------use cuda----------------- 
+2020-11-25_11:50:25, Step 19/15790 in Ep 0, 0.35s  train_loss:4.0057
+2020-11-25_11:50:32, Step 39/15790 in Ep 0, 0.35s  train_loss:3.3715
+2020-11-25_11:50:39, Step 59/15790 in Ep 0, 0.35s  train_loss:2.6395
+2020-11-25_11:50:46, Step 79/15790 in Ep 0, 0.35s  train_loss:2.8664
+2020-11-25_11:50:53, Step 99/15790 in Ep 0, 0.35s  train_loss:3.7913
+2020-11-25_11:51:00, Step 119/15790 in Ep 0, 0.35s  train_loss:3.1646
+2020-11-25_11:51:07, Step 139/15790 in Ep 0, 0.35s  train_loss:2.7366
+2020-11-25_11:51:19, Step 159/15790 in Ep 0, 0.35s  train_loss:3.2145
+2020-11-25_11:51:34, Step 179/15790 in Ep 0, 0.35s  train_loss:3.3540
+2020-11-25_11:51:50, Step 199/15790 in Ep 0, 0.35s  train_loss:2.7636
+2020-11-25_11:52:09, Step 219/15790 in Ep 0, 0.35s  train_loss:3.0733
+2020-11-25_11:52:27, Step 239/15790 in Ep 0, 0.35s  train_loss:2.7075
+2020-11-25_11:52:49, Step 259/15790 in Ep 0, 0.36s  train_loss:2.4274
+2020-11-25_11:53:07, Step 279/15790 in Ep 0, 0.35s  train_loss:2.8478
+2020-11-25_11:53:27, Step 299/15790 in Ep 0, 0.35s  train_loss:3.2828
+2020-11-25_11:53:46, Step 319/15790 in Ep 0, 0.35s  train_loss:2.1728
+2020-11-25_11:54:08, Step 339/15790 in Ep 0, 0.35s  train_loss:2.8845
+2020-11-25_11:54:26, Step 359/15790 in Ep 0, 0.35s  train_loss:2.9187
+2020-11-25_11:54:50, Step 379/15790 in Ep 0, 0.35s  train_loss:2.7836
+2020-11-25_11:55:12, Step 399/15790 in Ep 0, 0.35s  train_loss:2.5345
+2020-11-25_11:55:31, Step 419/15790 in Ep 0, 0.35s  train_loss:2.3580
+2020-11-25_11:55:46, Step 439/15790 in Ep 0, 0.35s  train_loss:2.3751
+2020-11-25_11:56:00, Step 459/15790 in Ep 0, 0.35s  train_loss:2.5924
+2020-11-25_11:56:14, Step 479/15790 in Ep 0, 0.35s  train_loss:2.5703
+2020-11-25_11:56:29, Step 499/15790 in Ep 0, 0.35s  train_loss:3.3305
+2020-11-25_11:56:43, Step 519/15790 in Ep 0, 0.35s  train_loss:3.0928
+2020-11-25_11:56:57, Step 539/15790 in Ep 0, 0.35s  train_loss:3.2220
+2020-11-25_11:57:12, Step 559/15790 in Ep 0, 0.35s  train_loss:2.3905
+2020-11-25_11:57:26, Step 579/15790 in Ep 0, 0.35s  train_loss:2.1659
+2020-11-25_11:57:40, Step 599/15790 in Ep 0, 0.35s  train_loss:2.6276
+2020-11-25_11:57:54, Step 619/15790 in Ep 0, 0.35s  train_loss:1.9804
+2020-11-25_11:58:09, Step 639/15790 in Ep 0, 0.35s  train_loss:2.2162
+2020-11-25_11:58:23, Step 659/15790 in Ep 0, 0.35s  train_loss:2.3939
+2020-11-25_11:58:37, Step 679/15790 in Ep 0, 0.35s  train_loss:3.0449
+2020-11-25_11:58:51, Step 699/15790 in Ep 0, 0.36s  train_loss:3.0705

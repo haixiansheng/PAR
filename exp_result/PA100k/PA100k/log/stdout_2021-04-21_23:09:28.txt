@@ -1,0 +1,322 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 64),
+             ('train_epoch', 10),
+             ('height', 256),
+             ('width', 192),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', ''),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(256, 192), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    RandomCrop(size=(256, 192), padding=None)
+    RandomHorizontalFlip(p=0.5)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+resnet18!
+-------------------use cuda----------------- 
+2021-04-21_23:09:40, Step 19/1407 in Ep 0, 0.09s  train_loss:2.1692
+2021-04-21_23:09:42, Step 39/1407 in Ep 0, 0.09s  train_loss:2.7257
+2021-04-21_23:09:44, Step 59/1407 in Ep 0, 0.09s  train_loss:1.4782
+2021-04-21_23:09:45, Step 79/1407 in Ep 0, 0.09s  train_loss:2.5903
+2021-04-21_23:09:47, Step 99/1407 in Ep 0, 0.08s  train_loss:1.4008
+2021-04-21_23:09:49, Step 119/1407 in Ep 0, 0.09s  train_loss:1.2876
+2021-04-21_23:09:51, Step 139/1407 in Ep 0, 0.09s  train_loss:2.3407
+2021-04-21_23:09:52, Step 159/1407 in Ep 0, 0.08s  train_loss:1.6090
+2021-04-21_23:09:54, Step 179/1407 in Ep 0, 0.09s  train_loss:1.3165
+2021-04-21_23:09:56, Step 199/1407 in Ep 0, 0.09s  train_loss:1.4274
+2021-04-21_23:09:58, Step 219/1407 in Ep 0, 0.09s  train_loss:1.8245
+2021-04-21_23:10:00, Step 239/1407 in Ep 0, 0.08s  train_loss:1.3463
+2021-04-21_23:10:01, Step 259/1407 in Ep 0, 0.09s  train_loss:1.6206
+2021-04-21_23:10:03, Step 279/1407 in Ep 0, 0.09s  train_loss:1.3796
+2021-04-21_23:10:05, Step 299/1407 in Ep 0, 0.09s  train_loss:1.9316
+2021-04-21_23:10:06, Step 319/1407 in Ep 0, 0.08s  train_loss:1.4610
+2021-04-21_23:10:08, Step 339/1407 in Ep 0, 0.08s  train_loss:1.5812
+2021-04-21_23:10:10, Step 359/1407 in Ep 0, 0.09s  train_loss:1.7152
+2021-04-21_23:10:12, Step 379/1407 in Ep 0, 0.09s  train_loss:1.9739
+2021-04-21_23:10:13, Step 399/1407 in Ep 0, 0.09s  train_loss:1.4859
+2021-04-21_23:10:15, Step 419/1407 in Ep 0, 0.08s  train_loss:1.3034
+2021-04-21_23:10:17, Step 439/1407 in Ep 0, 0.09s  train_loss:1.7012
+2021-04-21_23:10:19, Step 459/1407 in Ep 0, 0.08s  train_loss:1.4372
+2021-04-21_23:10:20, Step 479/1407 in Ep 0, 0.09s  train_loss:1.4280
+2021-04-21_23:10:22, Step 499/1407 in Ep 0, 0.09s  train_loss:1.3154
+2021-04-21_23:10:24, Step 519/1407 in Ep 0, 0.08s  train_loss:1.0860
+2021-04-21_23:10:26, Step 539/1407 in Ep 0, 0.09s  train_loss:1.0914
+2021-04-21_23:10:27, Step 559/1407 in Ep 0, 0.09s  train_loss:1.2165
+2021-04-21_23:10:29, Step 579/1407 in Ep 0, 0.09s  train_loss:1.6152
+2021-04-21_23:10:31, Step 599/1407 in Ep 0, 0.08s  train_loss:1.0638
+2021-04-21_23:10:33, Step 619/1407 in Ep 0, 0.09s  train_loss:1.2499
+2021-04-21_23:10:34, Step 639/1407 in Ep 0, 0.08s  train_loss:0.6864
+2021-04-21_23:10:36, Step 659/1407 in Ep 0, 0.09s  train_loss:1.4754
+2021-04-21_23:10:38, Step 679/1407 in Ep 0, 0.08s  train_loss:1.5779
+2021-04-21_23:10:40, Step 699/1407 in Ep 0, 0.09s  train_loss:1.1854
+2021-04-21_23:10:41, Step 719/1407 in Ep 0, 0.09s  train_loss:0.9415
+2021-04-21_23:10:43, Step 739/1407 in Ep 0, 0.08s  train_loss:1.0930
+2021-04-21_23:10:45, Step 759/1407 in Ep 0, 0.09s  train_loss:1.0618
+2021-04-21_23:10:47, Step 779/1407 in Ep 0, 0.09s  train_loss:1.2766
+2021-04-21_23:10:48, Step 799/1407 in Ep 0, 0.09s  train_loss:0.8271
+2021-04-21_23:10:50, Step 819/1407 in Ep 0, 0.09s  train_loss:1.7380
+2021-04-21_23:10:52, Step 839/1407 in Ep 0, 0.09s  train_loss:1.0365
+2021-04-21_23:10:54, Step 859/1407 in Ep 0, 0.08s  train_loss:1.1480
+2021-04-21_23:10:55, Step 879/1407 in Ep 0, 0.09s  train_loss:1.0159
+2021-04-21_23:10:57, Step 899/1407 in Ep 0, 0.09s  train_loss:1.3863
+2021-04-21_23:10:59, Step 919/1407 in Ep 0, 0.08s  train_loss:1.3348
+2021-04-21_23:11:01, Step 939/1407 in Ep 0, 0.09s  train_loss:1.2716
+2021-04-21_23:11:02, Step 959/1407 in Ep 0, 0.09s  train_loss:1.2121
+2021-04-21_23:11:04, Step 979/1407 in Ep 0, 0.09s  train_loss:0.9575
+2021-04-21_23:11:06, Step 999/1407 in Ep 0, 0.09s  train_loss:1.3159
+2021-04-21_23:11:08, Step 1019/1407 in Ep 0, 0.09s  train_loss:1.3097
+2021-04-21_23:11:09, Step 1039/1407 in Ep 0, 0.09s  train_loss:1.6439
+2021-04-21_23:11:11, Step 1059/1407 in Ep 0, 0.09s  train_loss:0.9858
+2021-04-21_23:11:13, Step 1079/1407 in Ep 0, 0.09s  train_loss:1.4141
+2021-04-21_23:11:15, Step 1099/1407 in Ep 0, 0.08s  train_loss:1.1178
+2021-04-21_23:11:17, Step 1119/1407 in Ep 0, 0.09s  train_loss:1.0248
+2021-04-21_23:11:18, Step 1139/1407 in Ep 0, 0.08s  train_loss:1.0439
+2021-04-21_23:11:20, Step 1159/1407 in Ep 0, 0.08s  train_loss:0.8966
+2021-04-21_23:11:22, Step 1179/1407 in Ep 0, 0.09s  train_loss:1.5086
+2021-04-21_23:11:24, Step 1199/1407 in Ep 0, 0.09s  train_loss:0.9581
+2021-04-21_23:11:25, Step 1219/1407 in Ep 0, 0.08s  train_loss:0.7003
+2021-04-21_23:11:27, Step 1239/1407 in Ep 0, 0.09s  train_loss:1.0190
+2021-04-21_23:11:29, Step 1259/1407 in Ep 0, 0.09s  train_loss:1.2893
+2021-04-21_23:11:31, Step 1279/1407 in Ep 0, 0.09s  train_loss:0.8907
+2021-04-21_23:11:32, Step 1299/1407 in Ep 0, 0.09s  train_loss:1.4684
+2021-04-21_23:11:34, Step 1319/1407 in Ep 0, 0.09s  train_loss:1.1310
+2021-04-21_23:11:36, Step 1339/1407 in Ep 0, 0.09s  train_loss:1.9434
+2021-04-21_23:11:38, Step 1359/1407 in Ep 0, 0.09s  train_loss:0.9605
+2021-04-21_23:11:39, Step 1379/1407 in Ep 0, 0.09s  train_loss:1.3179
+2021-04-21_23:11:41, Step 1399/1407 in Ep 0, 0.08s  train_loss:1.2665
+2021-04-21_23:11:42, Step 1406/1407 in Ep 0, 0.03s  train_loss:0.8665
+--------------------
+Epoch 0, LR 0.08000000100000002, Train_Time 124.05s, Loss: 1.3264
+write epoch: 0 train information 
+Evaluation on test set, 
+ ma: 0.8029,  pos_recall: 0.6968 , neg_recall: 0.9090 
+ Acc: 0.7968, Prec: 0.8428, Rec: 0.8403, F1: 0.8279
+2021-04-21_23:11:53
+------------------------------------------------------------
+2021-04-21_23:11:56, Step 19/1407 in Ep 1, 0.08s  train_loss:0.8368
+2021-04-21_23:11:57, Step 39/1407 in Ep 1, 0.09s  train_loss:0.9345
+2021-04-21_23:11:59, Step 59/1407 in Ep 1, 0.09s  train_loss:1.0429
+2021-04-21_23:12:01, Step 79/1407 in Ep 1, 0.09s  train_loss:0.6547
+2021-04-21_23:12:02, Step 99/1407 in Ep 1, 0.09s  train_loss:1.1115
+2021-04-21_23:12:04, Step 119/1407 in Ep 1, 0.09s  train_loss:1.1338
+2021-04-21_23:12:06, Step 139/1407 in Ep 1, 0.09s  train_loss:1.1142
+2021-04-21_23:12:08, Step 159/1407 in Ep 1, 0.09s  train_loss:0.7207
+2021-04-21_23:12:10, Step 179/1407 in Ep 1, 0.09s  train_loss:1.0354
+2021-04-21_23:12:11, Step 199/1407 in Ep 1, 0.09s  train_loss:1.5903
+2021-04-21_23:12:13, Step 219/1407 in Ep 1, 0.08s  train_loss:0.8112
+2021-04-21_23:12:15, Step 239/1407 in Ep 1, 0.09s  train_loss:0.9195
+2021-04-21_23:12:17, Step 259/1407 in Ep 1, 0.09s  train_loss:1.1822
+2021-04-21_23:12:18, Step 279/1407 in Ep 1, 0.09s  train_loss:1.0003
+2021-04-21_23:12:20, Step 299/1407 in Ep 1, 0.09s  train_loss:0.9414
+2021-04-21_23:12:22, Step 319/1407 in Ep 1, 0.09s  train_loss:1.3290
+2021-04-21_23:12:24, Step 339/1407 in Ep 1, 0.09s  train_loss:0.8978
+2021-04-21_23:12:25, Step 359/1407 in Ep 1, 0.09s  train_loss:0.5943
+2021-04-21_23:12:27, Step 379/1407 in Ep 1, 0.09s  train_loss:0.8549
+2021-04-21_23:12:29, Step 399/1407 in Ep 1, 0.09s  train_loss:0.9011
+2021-04-21_23:12:31, Step 419/1407 in Ep 1, 0.09s  train_loss:0.7743
+2021-04-21_23:12:32, Step 439/1407 in Ep 1, 0.09s  train_loss:0.8265
+2021-04-21_23:12:34, Step 459/1407 in Ep 1, 0.08s  train_loss:0.7488
+2021-04-21_23:12:36, Step 479/1407 in Ep 1, 0.09s  train_loss:0.6610
+2021-04-21_23:12:38, Step 499/1407 in Ep 1, 0.09s  train_loss:0.9570
+2021-04-21_23:12:40, Step 519/1407 in Ep 1, 0.09s  train_loss:0.7513
+2021-04-21_23:12:41, Step 539/1407 in Ep 1, 0.09s  train_loss:0.7807
+2021-04-21_23:12:43, Step 559/1407 in Ep 1, 0.09s  train_loss:0.7469
+2021-04-21_23:12:45, Step 579/1407 in Ep 1, 0.09s  train_loss:0.9627
+2021-04-21_23:12:47, Step 599/1407 in Ep 1, 0.09s  train_loss:0.7390
+2021-04-21_23:12:48, Step 619/1407 in Ep 1, 0.09s  train_loss:1.0786
+2021-04-21_23:12:50, Step 639/1407 in Ep 1, 0.09s  train_loss:0.5341
+2021-04-21_23:12:52, Step 659/1407 in Ep 1, 0.09s  train_loss:1.0213
+2021-04-21_23:12:54, Step 679/1407 in Ep 1, 0.09s  train_loss:0.5628
+2021-04-21_23:12:55, Step 699/1407 in Ep 1, 0.09s  train_loss:0.9168
+2021-04-21_23:12:57, Step 719/1407 in Ep 1, 0.09s  train_loss:1.1062
+2021-04-21_23:12:59, Step 739/1407 in Ep 1, 0.09s  train_loss:0.8989
+2021-04-21_23:13:01, Step 759/1407 in Ep 1, 0.08s  train_loss:0.9719
+2021-04-21_23:13:03, Step 779/1407 in Ep 1, 0.09s  train_loss:1.4189
+2021-04-21_23:13:04, Step 799/1407 in Ep 1, 0.09s  train_loss:0.7535
+2021-04-21_23:13:06, Step 819/1407 in Ep 1, 0.09s  train_loss:0.8144
+2021-04-21_23:13:08, Step 839/1407 in Ep 1, 0.09s  train_loss:1.5745
+2021-04-21_23:13:10, Step 859/1407 in Ep 1, 0.09s  train_loss:0.8667
+2021-04-21_23:13:12, Step 879/1407 in Ep 1, 0.09s  train_loss:1.1048
+2021-04-21_23:13:13, Step 899/1407 in Ep 1, 0.09s  train_loss:0.9057
+2021-04-21_23:13:15, Step 919/1407 in Ep 1, 0.09s  train_loss:0.9510
+2021-04-21_23:13:17, Step 939/1407 in Ep 1, 0.09s  train_loss:1.0085
+2021-04-21_23:13:19, Step 959/1407 in Ep 1, 0.09s  train_loss:1.0795
+2021-04-21_23:13:20, Step 979/1407 in Ep 1, 0.09s  train_loss:1.0466
+2021-04-21_23:13:22, Step 999/1407 in Ep 1, 0.09s  train_loss:0.6564
+2021-04-21_23:13:24, Step 1019/1407 in Ep 1, 0.09s  train_loss:1.0219
+2021-04-21_23:13:26, Step 1039/1407 in Ep 1, 0.09s  train_loss:0.7703
+2021-04-21_23:13:27, Step 1059/1407 in Ep 1, 0.09s  train_loss:1.1173
+2021-04-21_23:13:29, Step 1079/1407 in Ep 1, 0.09s  train_loss:0.7337
+2021-04-21_23:13:31, Step 1099/1407 in Ep 1, 0.09s  train_loss:0.9264
+2021-04-21_23:13:33, Step 1119/1407 in Ep 1, 0.09s  train_loss:0.7369
+2021-04-21_23:13:35, Step 1139/1407 in Ep 1, 0.10s  train_loss:0.8990
+2021-04-21_23:13:36, Step 1159/1407 in Ep 1, 0.09s  train_loss:1.2651
+2021-04-21_23:13:38, Step 1179/1407 in Ep 1, 0.09s  train_loss:1.1122
+2021-04-21_23:13:40, Step 1199/1407 in Ep 1, 0.09s  train_loss:0.9304
+2021-04-21_23:13:42, Step 1219/1407 in Ep 1, 0.09s  train_loss:0.7714
+2021-04-21_23:13:43, Step 1239/1407 in Ep 1, 0.09s  train_loss:0.8405
+2021-04-21_23:13:45, Step 1259/1407 in Ep 1, 0.09s  train_loss:0.7095
+2021-04-21_23:13:47, Step 1279/1407 in Ep 1, 0.09s  train_loss:0.5878
+2021-04-21_23:13:49, Step 1299/1407 in Ep 1, 0.09s  train_loss:0.8803
+2021-04-21_23:13:51, Step 1319/1407 in Ep 1, 0.09s  train_loss:1.4281
+2021-04-21_23:13:52, Step 1339/1407 in Ep 1, 0.09s  train_loss:1.0205
+2021-04-21_23:13:54, Step 1359/1407 in Ep 1, 0.09s  train_loss:0.7631
+2021-04-21_23:13:56, Step 1379/1407 in Ep 1, 0.09s  train_loss:0.7763
+2021-04-21_23:13:58, Step 1399/1407 in Ep 1, 0.09s  train_loss:0.8419
+2021-04-21_23:13:58, Step 1406/1407 in Ep 1, 0.03s  train_loss:0.4628
+--------------------
+Epoch 1, LR 0.08000000100000002, Train_Time 124.91s, Loss: 0.9317
+write epoch: 1 train information 
+Evaluation on test set, 
+ ma: 0.8105,  pos_recall: 0.7012 , neg_recall: 0.9198 
+ Acc: 0.8266, Prec: 0.8704, Rec: 0.8689, F1: 0.8569
+2021-04-21_23:14:10
+------------------------------------------------------------
+2021-04-21_23:14:12, Step 19/1407 in Ep 2, 0.09s  train_loss:0.5946
+2021-04-21_23:14:14, Step 39/1407 in Ep 2, 0.09s  train_loss:0.4732
+2021-04-21_23:14:16, Step 59/1407 in Ep 2, 0.09s  train_loss:0.8580
+2021-04-21_23:14:17, Step 79/1407 in Ep 2, 0.09s  train_loss:0.4700
+2021-04-21_23:14:19, Step 99/1407 in Ep 2, 0.09s  train_loss:0.5143
+2021-04-21_23:14:21, Step 119/1407 in Ep 2, 0.09s  train_loss:0.9632
+2021-04-21_23:14:23, Step 139/1407 in Ep 2, 0.09s  train_loss:0.6296
+2021-04-21_23:14:25, Step 159/1407 in Ep 2, 0.09s  train_loss:0.9335
+2021-04-21_23:14:26, Step 179/1407 in Ep 2, 0.09s  train_loss:0.8336
+2021-04-21_23:14:28, Step 199/1407 in Ep 2, 0.09s  train_loss:0.5003
+2021-04-21_23:14:30, Step 219/1407 in Ep 2, 0.09s  train_loss:0.6914
+2021-04-21_23:14:32, Step 239/1407 in Ep 2, 0.09s  train_loss:0.7725
+2021-04-21_23:14:33, Step 259/1407 in Ep 2, 0.09s  train_loss:1.1058
+2021-04-21_23:14:35, Step 279/1407 in Ep 2, 0.09s  train_loss:1.1927
+2021-04-21_23:14:37, Step 299/1407 in Ep 2, 0.09s  train_loss:0.6088
+2021-04-21_23:14:39, Step 319/1407 in Ep 2, 0.08s  train_loss:0.7367
+2021-04-21_23:14:40, Step 339/1407 in Ep 2, 0.09s  train_loss:0.4965
+2021-04-21_23:14:42, Step 359/1407 in Ep 2, 0.09s  train_loss:0.8195
+2021-04-21_23:14:44, Step 379/1407 in Ep 2, 0.09s  train_loss:0.6867
+2021-04-21_23:14:46, Step 399/1407 in Ep 2, 0.09s  train_loss:0.9595
+2021-04-21_23:14:47, Step 419/1407 in Ep 2, 0.09s  train_loss:0.7570
+2021-04-21_23:14:49, Step 439/1407 in Ep 2, 0.09s  train_loss:0.6674
+2021-04-21_23:14:51, Step 459/1407 in Ep 2, 0.09s  train_loss:1.0320
+2021-04-21_23:14:53, Step 479/1407 in Ep 2, 0.09s  train_loss:0.7888
+2021-04-21_23:14:54, Step 499/1407 in Ep 2, 0.09s  train_loss:0.9737
+2021-04-21_23:14:56, Step 519/1407 in Ep 2, 0.09s  train_loss:0.7544
+2021-04-21_23:14:58, Step 539/1407 in Ep 2, 0.09s  train_loss:0.5855
+2021-04-21_23:15:00, Step 559/1407 in Ep 2, 0.08s  train_loss:1.0609
+2021-04-21_23:15:01, Step 579/1407 in Ep 2, 0.09s  train_loss:0.9062
+2021-04-21_23:15:03, Step 599/1407 in Ep 2, 0.09s  train_loss:0.9128
+2021-04-21_23:15:05, Step 619/1407 in Ep 2, 0.09s  train_loss:0.5747
+2021-04-21_23:15:07, Step 639/1407 in Ep 2, 0.09s  train_loss:0.6114
+2021-04-21_23:15:08, Step 659/1407 in Ep 2, 0.09s  train_loss:0.8473
+2021-04-21_23:15:10, Step 679/1407 in Ep 2, 0.09s  train_loss:0.7230
+2021-04-21_23:15:12, Step 699/1407 in Ep 2, 0.09s  train_loss:0.7076
+2021-04-21_23:15:14, Step 719/1407 in Ep 2, 0.08s  train_loss:0.8929
+2021-04-21_23:15:16, Step 739/1407 in Ep 2, 0.09s  train_loss:0.6047
+2021-04-21_23:15:17, Step 759/1407 in Ep 2, 0.09s  train_loss:0.9938
+2021-04-21_23:15:19, Step 779/1407 in Ep 2, 0.09s  train_loss:0.8157
+2021-04-21_23:15:21, Step 799/1407 in Ep 2, 0.09s  train_loss:0.8474
+2021-04-21_23:15:23, Step 819/1407 in Ep 2, 0.09s  train_loss:0.6402
+2021-04-21_23:15:24, Step 839/1407 in Ep 2, 0.09s  train_loss:0.5346
+2021-04-21_23:15:26, Step 859/1407 in Ep 2, 0.09s  train_loss:0.4948
+2021-04-21_23:15:28, Step 879/1407 in Ep 2, 0.09s  train_loss:0.6366
+2021-04-21_23:15:30, Step 899/1407 in Ep 2, 0.09s  train_loss:0.8157
+2021-04-21_23:15:31, Step 919/1407 in Ep 2, 0.09s  train_loss:0.5889
+2021-04-21_23:15:33, Step 939/1407 in Ep 2, 0.09s  train_loss:0.6986
+2021-04-21_23:15:35, Step 959/1407 in Ep 2, 0.09s  train_loss:0.6828
+2021-04-21_23:15:37, Step 979/1407 in Ep 2, 0.09s  train_loss:0.9577
+2021-04-21_23:15:39, Step 999/1407 in Ep 2, 0.09s  train_loss:0.6072
+2021-04-21_23:15:40, Step 1019/1407 in Ep 2, 0.09s  train_loss:0.7589
+2021-04-21_23:15:42, Step 1039/1407 in Ep 2, 0.09s  train_loss:0.4847
+2021-04-21_23:15:44, Step 1059/1407 in Ep 2, 0.09s  train_loss:0.7918
+2021-04-21_23:15:46, Step 1079/1407 in Ep 2, 0.09s  train_loss:0.6279
+2021-04-21_23:15:47, Step 1099/1407 in Ep 2, 0.09s  train_loss:1.1507
+2021-04-21_23:15:49, Step 1119/1407 in Ep 2, 0.09s  train_loss:0.6921
+2021-04-21_23:15:51, Step 1139/1407 in Ep 2, 0.09s  train_loss:0.8520
+2021-04-21_23:15:53, Step 1159/1407 in Ep 2, 0.09s  train_loss:1.1263
+2021-04-21_23:15:54, Step 1179/1407 in Ep 2, 0.08s  train_loss:0.6677
+2021-04-21_23:15:56, Step 1199/1407 in Ep 2, 0.08s  train_loss:0.7659
+2021-04-21_23:15:58, Step 1219/1407 in Ep 2, 0.09s  train_loss:0.8806
+2021-04-21_23:16:00, Step 1239/1407 in Ep 2, 0.09s  train_loss:1.1718
+2021-04-21_23:16:02, Step 1259/1407 in Ep 2, 0.09s  train_loss:0.7066
+2021-04-21_23:16:03, Step 1279/1407 in Ep 2, 0.09s  train_loss:0.7592
+2021-04-21_23:16:05, Step 1299/1407 in Ep 2, 0.09s  train_loss:0.7762
+2021-04-21_23:16:07, Step 1319/1407 in Ep 2, 0.08s  train_loss:0.5625
+2021-04-21_23:16:09, Step 1339/1407 in Ep 2, 0.09s  train_loss:0.4446
+2021-04-21_23:16:10, Step 1359/1407 in Ep 2, 0.09s  train_loss:1.1105
+2021-04-21_23:16:12, Step 1379/1407 in Ep 2, 0.09s  train_loss:0.5467
+2021-04-21_23:16:14, Step 1399/1407 in Ep 2, 0.09s  train_loss:0.6750
+2021-04-21_23:16:14, Step 1406/1407 in Ep 2, 0.03s  train_loss:0.5192
+--------------------
+Epoch 2, LR 0.07804226165180617, Train_Time 124.39s, Loss: 0.8114
+write epoch: 2 train information 
+Evaluation on test set, 
+ ma: 0.8032,  pos_recall: 0.6935 , neg_recall: 0.9130 
+ Acc: 0.8145, Prec: 0.8544, Rec: 0.8601, F1: 0.8445
+2021-04-21_23:16:26
+------------------------------------------------------------
+2021-04-21_23:16:28, Step 19/1407 in Ep 3, 0.08s  train_loss:0.7573
+2021-04-21_23:16:30, Step 39/1407 in Ep 3, 0.09s  train_loss:0.9781
+2021-04-21_23:16:32, Step 59/1407 in Ep 3, 0.09s  train_loss:0.6828
+2021-04-21_23:16:33, Step 79/1407 in Ep 3, 0.09s  train_loss:0.9204
+2021-04-21_23:16:35, Step 99/1407 in Ep 3, 0.08s  train_loss:0.8464
+2021-04-21_23:16:37, Step 119/1407 in Ep 3, 0.09s  train_loss:0.5515
+2021-04-21_23:16:39, Step 139/1407 in Ep 3, 0.08s  train_loss:0.9378
+2021-04-21_23:16:40, Step 159/1407 in Ep 3, 0.09s  train_loss:0.6130
+2021-04-21_23:16:42, Step 179/1407 in Ep 3, 0.09s  train_loss:0.3732
+2021-04-21_23:16:44, Step 199/1407 in Ep 3, 0.09s  train_loss:0.5015
+2021-04-21_23:16:46, Step 219/1407 in Ep 3, 0.09s  train_loss:0.7831
+2021-04-21_23:16:47, Step 239/1407 in Ep 3, 0.09s  train_loss:0.6730
+2021-04-21_23:16:49, Step 259/1407 in Ep 3, 0.09s  train_loss:0.2851
+2021-04-21_23:16:51, Step 279/1407 in Ep 3, 0.09s  train_loss:0.5828
+2021-04-21_23:16:53, Step 299/1407 in Ep 3, 0.08s  train_loss:0.7360
+2021-04-21_23:16:54, Step 319/1407 in Ep 3, 0.09s  train_loss:0.8673
+2021-04-21_23:16:56, Step 339/1407 in Ep 3, 0.09s  train_loss:0.5525
+2021-04-21_23:16:58, Step 359/1407 in Ep 3, 0.08s  train_loss:0.7989
+2021-04-21_23:17:00, Step 379/1407 in Ep 3, 0.09s  train_loss:0.5750
+2021-04-21_23:17:01, Step 399/1407 in Ep 3, 0.09s  train_loss:0.7492
+2021-04-21_23:17:03, Step 419/1407 in Ep 3, 0.09s  train_loss:0.7030
+2021-04-21_23:17:05, Step 439/1407 in Ep 3, 0.09s  train_loss:0.5794
+2021-04-21_23:17:07, Step 459/1407 in Ep 3, 0.09s  train_loss:0.4935
+2021-04-21_23:17:08, Step 479/1407 in Ep 3, 0.09s  train_loss:0.6396
+2021-04-21_23:17:10, Step 499/1407 in Ep 3, 0.09s  train_loss:0.6226
+2021-04-21_23:17:12, Step 519/1407 in Ep 3, 0.09s  train_loss:0.7023
+2021-04-21_23:17:14, Step 539/1407 in Ep 3, 0.09s  train_loss:0.8346
+2021-04-21_23:17:15, Step 559/1407 in Ep 3, 0.09s  train_loss:1.1339
+2021-04-21_23:17:17, Step 579/1407 in Ep 3, 0.09s  train_loss:0.7811
+2021-04-21_23:17:19, Step 599/1407 in Ep 3, 0.08s  train_loss:0.7444
+2021-04-21_23:17:21, Step 619/1407 in Ep 3, 0.09s  train_loss:0.9761
+2021-04-21_23:17:22, Step 639/1407 in Ep 3, 0.09s  train_loss:1.0316
+2021-04-21_23:17:24, Step 659/1407 in Ep 3, 0.09s  train_loss:0.8814
+2021-04-21_23:17:26, Step 679/1407 in Ep 3, 0.09s  train_loss:0.5496
+2021-04-21_23:17:28, Step 699/1407 in Ep 3, 0.09s  train_loss:0.9106
+2021-04-21_23:17:30, Step 719/1407 in Ep 3, 0.09s  train_loss:0.3812
+2021-04-21_23:17:31, Step 739/1407 in Ep 3, 0.08s  train_loss:0.5465
+2021-04-21_23:17:33, Step 759/1407 in Ep 3, 0.08s  train_loss:0.5885
+2021-04-21_23:17:35, Step 779/1407 in Ep 3, 0.09s  train_loss:0.5376
+2021-04-21_23:17:37, Step 799/1407 in Ep 3, 0.09s  train_loss:0.5945
+2021-04-21_23:17:38, Step 819/1407 in Ep 3, 0.09s  train_loss:0.8696
+2021-04-21_23:17:40, Step 839/1407 in Ep 3, 0.09s  train_loss:0.6814
+2021-04-21_23:17:42, Step 859/1407 in Ep 3, 0.09s  train_loss:0.4289
+2021-04-21_23:17:44, Step 879/1407 in Ep 3, 0.09s  train_loss:0.9403
+2021-04-21_23:17:45, Step 899/1407 in Ep 3, 0.09s  train_loss:0.4000
+2021-04-21_23:17:47, Step 919/1407 in Ep 3, 0.09s  train_loss:0.6909
+2021-04-21_23:17:49, Step 939/1407 in Ep 3, 0.09s  train_loss:0.3506
+2021-04-21_23:17:51, Step 959/1407 in Ep 3, 0.09s  train_loss:0.4981
+2021-04-21_23:17:53, Step 979/1407 in Ep 3, 0.09s  train_loss:0.9156
+2021-04-21_23:17:54, Step 999/1407 in Ep 3, 0.09s  train_loss:1.0522
+2021-04-21_23:17:56, Step 1019/1407 in Ep 3, 0.09s  train_loss:1.3154
+2021-04-21_23:17:58, Step 1039/1407 in Ep 3, 0.09s  train_loss:1.1276
+2021-04-21_23:18:00, Step 1059/1407 in Ep 3, 0.09s  train_loss:0.7270
+2021-04-21_23:18:01, Step 1079/1407 in Ep 3, 0.09s  train_loss:0.6253
+2021-04-21_23:18:03, Step 1099/1407 in Ep 3, 0.09s  train_loss:0.6227
+2021-04-21_23:18:05, Step 1119/1407 in Ep 3, 0.08s  train_loss:0.9875

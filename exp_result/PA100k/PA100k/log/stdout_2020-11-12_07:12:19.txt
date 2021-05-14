@@ -1,0 +1,47 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 24),
+             ('train_epoch', 20),
+             ('height', 256),
+             ('width', 192),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', '1'),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU1 for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(256, 192), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    ColorJitter(brightness=[0.19999999999999996, 1.8], contrast=[0.19999999999999996, 1.8], saturation=[0.5, 1.5], hue=None)
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=(-45, 45), resample=False, expand=False)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+[6 0 0 0 0 0 0 1 0]
+imgs_len: 20204
+label_len: 20204
+[1 0 0 0 0 0 1 0 0]
+imgs_len: 834
+label_len: 834
+-------------------use cuda----------------- 
+2020-11-12_07:12:28, Step 19/842 in Ep 0, 0.13s  train_loss:6.6149
+2020-11-12_07:12:30, Step 39/842 in Ep 0, 0.13s  train_loss:5.6596
+2020-11-12_07:12:33, Step 59/842 in Ep 0, 0.13s  train_loss:2.3936
+2020-11-12_07:12:36, Step 79/842 in Ep 0, 0.13s  train_loss:3.4740
+2020-11-12_07:12:38, Step 99/842 in Ep 0, 0.13s  train_loss:1.3979
+2020-11-12_07:12:41, Step 119/842 in Ep 0, 0.14s  train_loss:1.5529
+2020-11-12_07:12:44, Step 139/842 in Ep 0, 0.13s  train_loss:16.8927
+2020-11-12_07:12:46, Step 159/842 in Ep 0, 0.13s  train_loss:1.0961
+2020-11-12_07:12:49, Step 179/842 in Ep 0, 0.14s  train_loss:1.8839
+2020-11-12_07:12:52, Step 199/842 in Ep 0, 0.13s  train_loss:-0.0002
+2020-11-12_07:12:54, Step 219/842 in Ep 0, 0.13s  train_loss:28.1462
+2020-11-12_07:12:57, Step 239/842 in Ep 0, 0.14s  train_loss:0.5110

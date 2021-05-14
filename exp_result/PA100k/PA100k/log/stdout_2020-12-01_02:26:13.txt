@@ -1,0 +1,516 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 72),
+             ('train_epoch', 20),
+             ('height', 192),
+             ('width', 256),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', '5'),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU5 for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(192, 256), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    ColorJitter(brightness=[0.19999999999999996, 1.8], contrast=[0.19999999999999996, 1.8], saturation=[0.5, 1.5], hue=None)
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=(-45, 45), resample=False, expand=False)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+[0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0]
+imgs_len: 22123
+label_len: 22123
+[0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0]
+imgs_len: 1877
+label_len: 1877
+-------------------use cuda----------------- 
+2020-12-01_02:26:36, Step 19/308 in Ep 0, 0.36s  train_loss:6.2585
+2020-12-01_02:26:44, Step 39/308 in Ep 0, 0.35s  train_loss:4.2360
+2020-12-01_02:26:51, Step 59/308 in Ep 0, 0.36s  train_loss:4.5937
+2020-12-01_02:26:58, Step 79/308 in Ep 0, 0.36s  train_loss:4.4709
+2020-12-01_02:27:05, Step 99/308 in Ep 0, 0.35s  train_loss:3.5947
+2020-12-01_02:27:12, Step 119/308 in Ep 0, 0.35s  train_loss:3.3980
+2020-12-01_02:27:19, Step 139/308 in Ep 0, 0.36s  train_loss:4.4594
+2020-12-01_02:27:26, Step 159/308 in Ep 0, 0.36s  train_loss:3.4601
+2020-12-01_02:27:33, Step 179/308 in Ep 0, 0.35s  train_loss:3.0949
+2020-12-01_02:27:41, Step 199/308 in Ep 0, 0.35s  train_loss:3.3087
+2020-12-01_02:27:48, Step 219/308 in Ep 0, 0.35s  train_loss:3.2235
+2020-12-01_02:27:55, Step 239/308 in Ep 0, 0.35s  train_loss:3.4663
+2020-12-01_02:28:02, Step 259/308 in Ep 0, 0.35s  train_loss:3.5776
+2020-12-01_02:28:09, Step 279/308 in Ep 0, 0.35s  train_loss:2.4967
+2020-12-01_02:28:16, Step 299/308 in Ep 0, 0.36s  train_loss:3.0477
+2020-12-01_02:28:19, Step 307/308 in Ep 0, 0.11s  train_loss:6.1826
+--------------------
+Epoch 0, LR 0.08000000100000002, Train_Time 110.49s, Loss: 4.4830
+write epoch: 0 train information 
+Evaluation on test set, 
+ ma: 0.8267,  pos_recall: 0.6870 , neg_recall: 0.9664 
+ Acc: 0.7634, Prec: 0.8129, Rec: 0.8281, F1: 0.8130
+2020-12-01_02:28:22
+------------------------------------------------------------
+2020-12-01_02:28:30, Step 19/308 in Ep 1, 0.35s  train_loss:3.0856
+2020-12-01_02:28:37, Step 39/308 in Ep 1, 0.35s  train_loss:2.7688
+2020-12-01_02:28:44, Step 59/308 in Ep 1, 0.35s  train_loss:3.3521
+2020-12-01_02:28:51, Step 79/308 in Ep 1, 0.36s  train_loss:3.4055
+2020-12-01_02:28:58, Step 99/308 in Ep 1, 0.35s  train_loss:4.2079
+2020-12-01_02:29:06, Step 119/308 in Ep 1, 0.35s  train_loss:3.2031
+2020-12-01_02:29:13, Step 139/308 in Ep 1, 0.35s  train_loss:2.8334
+2020-12-01_02:29:20, Step 159/308 in Ep 1, 0.36s  train_loss:3.5016
+2020-12-01_02:29:27, Step 179/308 in Ep 1, 0.36s  train_loss:3.4416
+2020-12-01_02:29:34, Step 199/308 in Ep 1, 0.35s  train_loss:3.5945
+2020-12-01_02:29:41, Step 219/308 in Ep 1, 0.36s  train_loss:3.8605
+2020-12-01_02:29:48, Step 239/308 in Ep 1, 0.36s  train_loss:3.8288
+2020-12-01_02:29:55, Step 259/308 in Ep 1, 0.36s  train_loss:3.6682
+2020-12-01_02:30:03, Step 279/308 in Ep 1, 0.36s  train_loss:2.4195
+2020-12-01_02:30:10, Step 299/308 in Ep 1, 0.36s  train_loss:3.9270
+2020-12-01_02:30:12, Step 307/308 in Ep 1, 0.12s  train_loss:5.6593
+--------------------
+Epoch 1, LR 0.08000000100000002, Train_Time 110.04s, Loss: 3.2958
+write epoch: 1 train information 
+Evaluation on test set, 
+ ma: 0.8539,  pos_recall: 0.7439 , neg_recall: 0.9640 
+ Acc: 0.7496, Prec: 0.7992, Rec: 0.8362, F1: 0.8077
+2020-12-01_02:30:16
+------------------------------------------------------------
+2020-12-01_02:30:24, Step 19/308 in Ep 2, 0.35s  train_loss:2.8708
+2020-12-01_02:30:31, Step 39/308 in Ep 2, 0.35s  train_loss:3.2306
+2020-12-01_02:30:38, Step 59/308 in Ep 2, 0.35s  train_loss:3.3360
+2020-12-01_02:30:45, Step 79/308 in Ep 2, 0.35s  train_loss:3.1775
+2020-12-01_02:30:52, Step 99/308 in Ep 2, 0.36s  train_loss:4.4364
+2020-12-01_02:30:59, Step 119/308 in Ep 2, 0.35s  train_loss:2.7764
+2020-12-01_02:31:06, Step 139/308 in Ep 2, 0.35s  train_loss:2.7469
+2020-12-01_02:31:13, Step 159/308 in Ep 2, 0.35s  train_loss:3.1807
+2020-12-01_02:31:20, Step 179/308 in Ep 2, 0.35s  train_loss:2.7690
+2020-12-01_02:31:27, Step 199/308 in Ep 2, 0.35s  train_loss:3.1008
+2020-12-01_02:31:34, Step 219/308 in Ep 2, 0.36s  train_loss:3.8135
+2020-12-01_02:31:42, Step 239/308 in Ep 2, 0.35s  train_loss:3.2125
+2020-12-01_02:31:49, Step 259/308 in Ep 2, 0.35s  train_loss:2.3888
+2020-12-01_02:31:56, Step 279/308 in Ep 2, 0.35s  train_loss:3.0968
+2020-12-01_02:32:03, Step 299/308 in Ep 2, 0.35s  train_loss:2.9270
+2020-12-01_02:32:05, Step 307/308 in Ep 2, 0.11s  train_loss:2.8708
+--------------------
+Epoch 2, LR 0.07950753462380553, Train_Time 109.47s, Loss: 2.9915
+write epoch: 2 train information 
+Evaluation on test set, 
+ ma: 0.8688,  pos_recall: 0.7710 , neg_recall: 0.9666 
+ Acc: 0.7928, Prec: 0.8246, Rec: 0.8746, F1: 0.8415
+2020-12-01_02:32:09
+------------------------------------------------------------
+2020-12-01_02:32:17, Step 19/308 in Ep 3, 0.36s  train_loss:3.1580
+2020-12-01_02:32:24, Step 39/308 in Ep 3, 0.36s  train_loss:3.2484
+2020-12-01_02:32:31, Step 59/308 in Ep 3, 0.35s  train_loss:2.3537
+2020-12-01_02:32:38, Step 79/308 in Ep 3, 0.36s  train_loss:2.5462
+2020-12-01_02:32:45, Step 99/308 in Ep 3, 0.35s  train_loss:1.8654
+2020-12-01_02:32:52, Step 119/308 in Ep 3, 0.36s  train_loss:2.8419
+2020-12-01_02:32:59, Step 139/308 in Ep 3, 0.36s  train_loss:2.9041
+2020-12-01_02:33:06, Step 159/308 in Ep 3, 0.35s  train_loss:2.7501
+2020-12-01_02:33:14, Step 179/308 in Ep 3, 0.36s  train_loss:2.5782
+2020-12-01_02:33:21, Step 199/308 in Ep 3, 0.35s  train_loss:2.7059
+2020-12-01_02:33:28, Step 219/308 in Ep 3, 0.35s  train_loss:2.9900
+2020-12-01_02:33:35, Step 239/308 in Ep 3, 0.35s  train_loss:2.2198
+2020-12-01_02:33:42, Step 259/308 in Ep 3, 0.35s  train_loss:2.9093
+2020-12-01_02:33:49, Step 279/308 in Ep 3, 0.36s  train_loss:2.8527
+2020-12-01_02:33:56, Step 299/308 in Ep 3, 0.35s  train_loss:3.3638
+2020-12-01_02:33:59, Step 307/308 in Ep 3, 0.11s  train_loss:2.2091
+--------------------
+Epoch 3, LR 0.07804226165180617, Train_Time 109.88s, Loss: 2.8303
+write epoch: 3 train information 
+Evaluation on test set, 
+ ma: 0.8726,  pos_recall: 0.7768 , neg_recall: 0.9685 
+ Acc: 0.7981, Prec: 0.8349, Rec: 0.8764, F1: 0.8472
+2020-12-01_02:34:02
+------------------------------------------------------------
+2020-12-01_02:34:10, Step 19/308 in Ep 4, 0.35s  train_loss:2.9326
+2020-12-01_02:34:17, Step 39/308 in Ep 4, 0.35s  train_loss:2.3876
+2020-12-01_02:34:24, Step 59/308 in Ep 4, 0.35s  train_loss:1.8689
+2020-12-01_02:34:31, Step 79/308 in Ep 4, 0.35s  train_loss:2.8357
+2020-12-01_02:34:38, Step 99/308 in Ep 4, 0.35s  train_loss:2.7370
+2020-12-01_02:34:45, Step 119/308 in Ep 4, 0.35s  train_loss:2.9444
+2020-12-01_02:34:52, Step 139/308 in Ep 4, 0.35s  train_loss:3.6403
+2020-12-01_02:35:00, Step 159/308 in Ep 4, 0.35s  train_loss:2.6526
+2020-12-01_02:35:07, Step 179/308 in Ep 4, 0.35s  train_loss:2.3043
+2020-12-01_02:35:14, Step 199/308 in Ep 4, 0.35s  train_loss:2.2505
+2020-12-01_02:35:21, Step 219/308 in Ep 4, 0.35s  train_loss:2.7760
+2020-12-01_02:35:28, Step 239/308 in Ep 4, 0.35s  train_loss:2.5401
+2020-12-01_02:35:35, Step 259/308 in Ep 4, 0.35s  train_loss:2.3383
+2020-12-01_02:35:42, Step 279/308 in Ep 4, 0.36s  train_loss:2.5805
+2020-12-01_02:35:49, Step 299/308 in Ep 4, 0.35s  train_loss:2.6536
+2020-12-01_02:35:52, Step 307/308 in Ep 4, 0.12s  train_loss:2.0765
+--------------------
+Epoch 4, LR 0.07564026196753472, Train_Time 109.65s, Loss: 2.7239
+write epoch: 4 train information 
+Evaluation on test set, 
+ ma: 0.8646,  pos_recall: 0.7616 , neg_recall: 0.9677 
+ Acc: 0.7894, Prec: 0.8306, Rec: 0.8696, F1: 0.8407
+2020-12-01_02:35:55
+------------------------------------------------------------
+2020-12-01_02:36:03, Step 19/308 in Ep 5, 0.35s  train_loss:2.7352
+2020-12-01_02:36:10, Step 39/308 in Ep 5, 0.36s  train_loss:2.1963
+2020-12-01_02:36:17, Step 59/308 in Ep 5, 0.35s  train_loss:2.7342
+2020-12-01_02:36:24, Step 79/308 in Ep 5, 0.35s  train_loss:2.5483
+2020-12-01_02:36:31, Step 99/308 in Ep 5, 0.35s  train_loss:2.4681
+2020-12-01_02:36:38, Step 119/308 in Ep 5, 0.35s  train_loss:3.3248
+2020-12-01_02:36:45, Step 139/308 in Ep 5, 0.35s  train_loss:2.9149
+2020-12-01_02:36:52, Step 159/308 in Ep 5, 0.35s  train_loss:2.1493
+2020-12-01_02:36:59, Step 179/308 in Ep 5, 0.35s  train_loss:2.6342
+2020-12-01_02:37:06, Step 199/308 in Ep 5, 0.35s  train_loss:3.0141
+2020-12-01_02:37:14, Step 219/308 in Ep 5, 0.35s  train_loss:2.4850
+2020-12-01_02:37:21, Step 239/308 in Ep 5, 0.35s  train_loss:1.9862
+2020-12-01_02:37:28, Step 259/308 in Ep 5, 0.35s  train_loss:1.9805
+2020-12-01_02:37:35, Step 279/308 in Ep 5, 0.35s  train_loss:2.4667
+2020-12-01_02:37:42, Step 299/308 in Ep 5, 0.35s  train_loss:2.5742
+2020-12-01_02:37:44, Step 307/308 in Ep 5, 0.11s  train_loss:4.0068
+--------------------
+Epoch 5, LR 0.07236068077499791, Train_Time 109.52s, Loss: 2.6198
+write epoch: 5 train information 
+Evaluation on test set, 
+ ma: 0.8639,  pos_recall: 0.7625 , neg_recall: 0.9654 
+ Acc: 0.7966, Prec: 0.8284, Rec: 0.8719, F1: 0.8428
+2020-12-01_02:37:48
+------------------------------------------------------------
+2020-12-01_02:37:56, Step 19/308 in Ep 6, 0.35s  train_loss:2.0778
+2020-12-01_02:38:03, Step 39/308 in Ep 6, 0.36s  train_loss:2.0379
+2020-12-01_02:38:10, Step 59/308 in Ep 6, 0.35s  train_loss:2.0834
+2020-12-01_02:38:17, Step 79/308 in Ep 6, 0.35s  train_loss:2.8656
+2020-12-01_02:38:24, Step 99/308 in Ep 6, 0.35s  train_loss:2.1204
+2020-12-01_02:38:31, Step 119/308 in Ep 6, 0.36s  train_loss:2.5565
+2020-12-01_02:38:38, Step 139/308 in Ep 6, 0.35s  train_loss:2.9361
+2020-12-01_02:38:45, Step 159/308 in Ep 6, 0.35s  train_loss:2.6238
+2020-12-01_02:38:52, Step 179/308 in Ep 6, 0.35s  train_loss:2.3734
+2020-12-01_02:39:00, Step 199/308 in Ep 6, 0.35s  train_loss:1.9357
+2020-12-01_02:39:07, Step 219/308 in Ep 6, 0.35s  train_loss:2.1781
+2020-12-01_02:39:14, Step 239/308 in Ep 6, 0.35s  train_loss:2.1501
+2020-12-01_02:39:21, Step 259/308 in Ep 6, 0.35s  train_loss:2.0276
+2020-12-01_02:39:28, Step 279/308 in Ep 6, 0.36s  train_loss:3.4916
+2020-12-01_02:39:35, Step 299/308 in Ep 6, 0.35s  train_loss:2.7751
+2020-12-01_02:39:38, Step 307/308 in Ep 6, 0.11s  train_loss:2.5182
+--------------------
+Epoch 6, LR 0.0682842722474619, Train_Time 110.22s, Loss: 2.5506
+write epoch: 6 train information 
+Evaluation on test set, 
+ ma: 0.8682,  pos_recall: 0.7666 , neg_recall: 0.9698 
+ Acc: 0.7944, Prec: 0.8343, Rec: 0.8654, F1: 0.8428
+2020-12-01_02:39:41
+------------------------------------------------------------
+2020-12-01_02:39:49, Step 19/308 in Ep 7, 0.35s  train_loss:3.1055
+2020-12-01_02:39:56, Step 39/308 in Ep 7, 0.35s  train_loss:2.0294
+2020-12-01_02:40:04, Step 59/308 in Ep 7, 0.35s  train_loss:2.3685
+2020-12-01_02:40:11, Step 79/308 in Ep 7, 0.35s  train_loss:2.6978
+2020-12-01_02:40:18, Step 99/308 in Ep 7, 0.35s  train_loss:2.3896
+2020-12-01_02:40:25, Step 119/308 in Ep 7, 0.36s  train_loss:1.9950
+2020-12-01_02:40:32, Step 139/308 in Ep 7, 0.35s  train_loss:1.9068
+2020-12-01_02:40:39, Step 159/308 in Ep 7, 0.35s  train_loss:2.5904
+2020-12-01_02:40:46, Step 179/308 in Ep 7, 0.35s  train_loss:2.4011
+2020-12-01_02:40:53, Step 199/308 in Ep 7, 0.36s  train_loss:2.6175
+2020-12-01_02:41:00, Step 219/308 in Ep 7, 0.35s  train_loss:2.4682
+2020-12-01_02:41:08, Step 239/308 in Ep 7, 0.36s  train_loss:2.8618
+2020-12-01_02:41:15, Step 259/308 in Ep 7, 0.35s  train_loss:3.1925
+2020-12-01_02:41:22, Step 279/308 in Ep 7, 0.35s  train_loss:2.2644
+2020-12-01_02:41:29, Step 299/308 in Ep 7, 0.35s  train_loss:1.7955
+2020-12-01_02:41:31, Step 307/308 in Ep 7, 0.11s  train_loss:3.4011
+--------------------
+Epoch 7, LR 0.06351141109169893, Train_Time 110.15s, Loss: 2.4522
+write epoch: 7 train information 
+Evaluation on test set, 
+ ma: 0.8675,  pos_recall: 0.7649 , neg_recall: 0.9700 
+ Acc: 0.8058, Prec: 0.8415, Rec: 0.8812, F1: 0.8533
+2020-12-01_02:41:34
+------------------------------------------------------------
+2020-12-01_02:41:42, Step 19/308 in Ep 8, 0.35s  train_loss:2.5641
+2020-12-01_02:41:49, Step 39/308 in Ep 8, 0.36s  train_loss:2.4117
+2020-12-01_02:41:57, Step 59/308 in Ep 8, 0.35s  train_loss:2.4116
+2020-12-01_02:42:04, Step 79/308 in Ep 8, 0.36s  train_loss:2.8509
+2020-12-01_02:42:11, Step 99/308 in Ep 8, 0.35s  train_loss:2.6837
+2020-12-01_02:42:18, Step 119/308 in Ep 8, 0.35s  train_loss:2.1993
+2020-12-01_02:42:25, Step 139/308 in Ep 8, 0.37s  train_loss:2.7237
+2020-12-01_02:42:32, Step 159/308 in Ep 8, 0.35s  train_loss:2.8628
+2020-12-01_02:42:39, Step 179/308 in Ep 8, 0.35s  train_loss:2.5447
+2020-12-01_02:42:46, Step 199/308 in Ep 8, 0.35s  train_loss:2.9610
+2020-12-01_02:42:53, Step 219/308 in Ep 8, 0.37s  train_loss:1.6385
+2020-12-01_02:43:00, Step 239/308 in Ep 8, 0.36s  train_loss:2.4754
+2020-12-01_02:43:07, Step 259/308 in Ep 8, 0.37s  train_loss:1.6368
+2020-12-01_02:43:15, Step 279/308 in Ep 8, 0.35s  train_loss:2.8193
+2020-12-01_02:43:22, Step 299/308 in Ep 8, 0.35s  train_loss:2.1252
+2020-12-01_02:43:24, Step 307/308 in Ep 8, 0.11s  train_loss:3.4092
+--------------------
+Epoch 8, LR 0.05815962098958188, Train_Time 109.84s, Loss: 2.3436
+write epoch: 8 train information 
+Evaluation on test set, 
+ ma: 0.8790,  pos_recall: 0.7918 , neg_recall: 0.9662 
+ Acc: 0.7966, Prec: 0.8303, Rec: 0.8794, F1: 0.8456
+2020-12-01_02:43:27
+------------------------------------------------------------
+2020-12-01_02:43:35, Step 19/308 in Ep 9, 0.35s  train_loss:2.9727
+2020-12-01_02:43:42, Step 39/308 in Ep 9, 0.36s  train_loss:1.9128
+2020-12-01_02:43:49, Step 59/308 in Ep 9, 0.35s  train_loss:2.1966
+2020-12-01_02:43:57, Step 79/308 in Ep 9, 0.35s  train_loss:2.7246
+2020-12-01_02:44:04, Step 99/308 in Ep 9, 0.35s  train_loss:2.7086
+2020-12-01_02:44:11, Step 119/308 in Ep 9, 0.35s  train_loss:1.8158
+2020-12-01_02:44:18, Step 139/308 in Ep 9, 0.35s  train_loss:2.8212
+2020-12-01_02:44:25, Step 159/308 in Ep 9, 0.35s  train_loss:2.6019
+2020-12-01_02:44:32, Step 179/308 in Ep 9, 0.35s  train_loss:2.5199
+2020-12-01_02:44:39, Step 199/308 in Ep 9, 0.35s  train_loss:1.8370
+2020-12-01_02:44:46, Step 219/308 in Ep 9, 0.36s  train_loss:1.9664
+2020-12-01_02:44:53, Step 239/308 in Ep 9, 0.35s  train_loss:2.8954
+2020-12-01_02:45:00, Step 259/308 in Ep 9, 0.35s  train_loss:1.5665
+2020-12-01_02:45:07, Step 279/308 in Ep 9, 0.36s  train_loss:2.6174
+2020-12-01_02:45:15, Step 299/308 in Ep 9, 0.36s  train_loss:1.7795
+2020-12-01_02:45:17, Step 307/308 in Ep 9, 0.12s  train_loss:2.2404
+--------------------
+Epoch 9, LR 0.052360680774997906, Train_Time 109.92s, Loss: 2.3004
+write epoch: 9 train information 
+Evaluation on test set, 
+ ma: 0.8762,  pos_recall: 0.7837 , neg_recall: 0.9687 
+ Acc: 0.8079, Prec: 0.8373, Rec: 0.8814, F1: 0.8523
+2020-12-01_02:45:21
+------------------------------------------------------------
+2020-12-01_02:45:29, Step 19/308 in Ep 10, 0.36s  train_loss:1.6479
+2020-12-01_02:45:36, Step 39/308 in Ep 10, 0.36s  train_loss:2.3637
+2020-12-01_02:45:43, Step 59/308 in Ep 10, 0.36s  train_loss:2.7275
+2020-12-01_02:45:50, Step 79/308 in Ep 10, 0.36s  train_loss:2.2370
+2020-12-01_02:45:57, Step 99/308 in Ep 10, 0.36s  train_loss:1.5238
+2020-12-01_02:46:04, Step 119/308 in Ep 10, 0.36s  train_loss:2.0520
+2020-12-01_02:46:11, Step 139/308 in Ep 10, 0.36s  train_loss:2.1165
+2020-12-01_02:46:19, Step 159/308 in Ep 10, 0.36s  train_loss:2.4587
+2020-12-01_02:46:26, Step 179/308 in Ep 10, 0.36s  train_loss:1.7971
+2020-12-01_02:46:33, Step 199/308 in Ep 10, 0.35s  train_loss:2.1070
+2020-12-01_02:46:40, Step 219/308 in Ep 10, 0.37s  train_loss:1.8715
+2020-12-01_02:46:47, Step 239/308 in Ep 10, 0.35s  train_loss:2.1556
+2020-12-01_02:46:54, Step 259/308 in Ep 10, 0.36s  train_loss:2.1520
+2020-12-01_02:47:01, Step 279/308 in Ep 10, 0.35s  train_loss:2.3050
+2020-12-01_02:47:08, Step 299/308 in Ep 10, 0.35s  train_loss:2.3977
+2020-12-01_02:47:11, Step 307/308 in Ep 10, 0.11s  train_loss:3.7365
+--------------------
+Epoch 10, LR 0.04625737960160924, Train_Time 110.31s, Loss: 2.2304
+write epoch: 10 train information 
+Evaluation on test set, 
+ ma: 0.8783,  pos_recall: 0.7879 , neg_recall: 0.9688 
+ Acc: 0.8078, Prec: 0.8375, Rec: 0.8900, F1: 0.8555
+2020-12-01_02:47:14
+------------------------------------------------------------
+2020-12-01_02:47:22, Step 19/308 in Ep 11, 0.35s  train_loss:2.6463
+2020-12-01_02:47:30, Step 39/308 in Ep 11, 0.35s  train_loss:2.1200
+2020-12-01_02:47:37, Step 59/308 in Ep 11, 0.35s  train_loss:2.3914
+2020-12-01_02:47:44, Step 79/308 in Ep 11, 0.39s  train_loss:2.1559
+2020-12-01_02:47:51, Step 99/308 in Ep 11, 0.37s  train_loss:2.7052
+2020-12-01_02:47:58, Step 119/308 in Ep 11, 0.35s  train_loss:2.2374
+2020-12-01_02:48:06, Step 139/308 in Ep 11, 0.35s  train_loss:2.0083
+2020-12-01_02:48:13, Step 159/308 in Ep 11, 0.36s  train_loss:2.0253
+2020-12-01_02:48:20, Step 179/308 in Ep 11, 0.37s  train_loss:2.0064
+2020-12-01_02:48:27, Step 199/308 in Ep 11, 0.37s  train_loss:2.0262
+2020-12-01_02:48:35, Step 219/308 in Ep 11, 0.37s  train_loss:1.6194
+2020-12-01_02:48:42, Step 239/308 in Ep 11, 0.36s  train_loss:2.9710
+2020-12-01_02:48:49, Step 259/308 in Ep 11, 0.36s  train_loss:1.7136
+2020-12-01_02:48:57, Step 279/308 in Ep 11, 0.36s  train_loss:1.5990
+2020-12-01_02:49:04, Step 299/308 in Ep 11, 0.37s  train_loss:1.9496
+2020-12-01_02:49:07, Step 307/308 in Ep 11, 0.11s  train_loss:1.8310
+--------------------
+Epoch 11, LR 0.04000000100000001, Train_Time 112.39s, Loss: 2.1190
+write epoch: 11 train information 
+Evaluation on test set, 
+ ma: 0.8737,  pos_recall: 0.7783 , neg_recall: 0.9692 
+ Acc: 0.8090, Prec: 0.8407, Rec: 0.8871, F1: 0.8557
+2020-12-01_02:49:10
+------------------------------------------------------------
+2020-12-01_02:49:18, Step 19/308 in Ep 12, 0.35s  train_loss:2.2635
+2020-12-01_02:49:25, Step 39/308 in Ep 12, 0.35s  train_loss:1.6814
+2020-12-01_02:49:32, Step 59/308 in Ep 12, 0.35s  train_loss:2.5053
+2020-12-01_02:49:39, Step 79/308 in Ep 12, 0.35s  train_loss:2.3851
+2020-12-01_02:49:46, Step 99/308 in Ep 12, 0.35s  train_loss:1.8570
+2020-12-01_02:49:53, Step 119/308 in Ep 12, 0.35s  train_loss:1.6011
+2020-12-01_02:50:00, Step 139/308 in Ep 12, 0.35s  train_loss:1.9213
+2020-12-01_02:50:08, Step 159/308 in Ep 12, 0.35s  train_loss:1.7895
+2020-12-01_02:50:15, Step 179/308 in Ep 12, 0.35s  train_loss:2.6032
+2020-12-01_02:50:22, Step 199/308 in Ep 12, 0.35s  train_loss:2.0892
+2020-12-01_02:50:29, Step 219/308 in Ep 12, 0.35s  train_loss:2.1832
+2020-12-01_02:50:36, Step 239/308 in Ep 12, 0.35s  train_loss:2.4145
+2020-12-01_02:50:43, Step 259/308 in Ep 12, 0.36s  train_loss:2.0915
+2020-12-01_02:50:50, Step 279/308 in Ep 12, 0.35s  train_loss:2.7808
+2020-12-01_02:50:57, Step 299/308 in Ep 12, 0.35s  train_loss:2.8500
+2020-12-01_02:51:00, Step 307/308 in Ep 12, 0.12s  train_loss:2.4498
+--------------------
+Epoch 12, LR 0.03374262239839078, Train_Time 109.64s, Loss: 2.0753
+write epoch: 12 train information 
+Evaluation on test set, 
+ ma: 0.8826,  pos_recall: 0.7964 , neg_recall: 0.9687 
+ Acc: 0.8127, Prec: 0.8409, Rec: 0.8907, F1: 0.8580
+2020-12-01_02:51:03
+------------------------------------------------------------
+2020-12-01_02:51:11, Step 19/308 in Ep 13, 0.35s  train_loss:1.9959
+2020-12-01_02:51:18, Step 39/308 in Ep 13, 0.35s  train_loss:2.0189
+2020-12-01_02:51:25, Step 59/308 in Ep 13, 0.35s  train_loss:1.9069
+2020-12-01_02:51:32, Step 79/308 in Ep 13, 0.35s  train_loss:1.7832
+2020-12-01_02:51:39, Step 99/308 in Ep 13, 0.35s  train_loss:1.8967
+2020-12-01_02:51:46, Step 119/308 in Ep 13, 0.35s  train_loss:1.9524
+2020-12-01_02:51:53, Step 139/308 in Ep 13, 0.35s  train_loss:2.1802
+2020-12-01_02:52:00, Step 159/308 in Ep 13, 0.35s  train_loss:1.8205
+2020-12-01_02:52:08, Step 179/308 in Ep 13, 0.35s  train_loss:1.7365
+2020-12-01_02:52:15, Step 199/308 in Ep 13, 0.35s  train_loss:1.8169
+2020-12-01_02:52:22, Step 219/308 in Ep 13, 0.35s  train_loss:2.2602
+2020-12-01_02:52:29, Step 239/308 in Ep 13, 0.35s  train_loss:2.0187
+2020-12-01_02:52:36, Step 259/308 in Ep 13, 0.35s  train_loss:1.6624
+2020-12-01_02:52:43, Step 279/308 in Ep 13, 0.35s  train_loss:2.3834
+2020-12-01_02:52:50, Step 299/308 in Ep 13, 0.35s  train_loss:2.0778
+2020-12-01_02:52:53, Step 307/308 in Ep 13, 0.11s  train_loss:3.4836
+--------------------
+Epoch 13, LR 0.02763932122500211, Train_Time 109.35s, Loss: 1.9834
+write epoch: 13 train information 
+Evaluation on test set, 
+ ma: 0.8751,  pos_recall: 0.7805 , neg_recall: 0.9698 
+ Acc: 0.8065, Prec: 0.8374, Rec: 0.8798, F1: 0.8512
+2020-12-01_02:52:56
+------------------------------------------------------------
+2020-12-01_02:53:04, Step 19/308 in Ep 14, 0.35s  train_loss:2.0894
+2020-12-01_02:53:11, Step 39/308 in Ep 14, 0.36s  train_loss:1.9283
+2020-12-01_02:53:18, Step 59/308 in Ep 14, 0.35s  train_loss:1.3160
+2020-12-01_02:53:25, Step 79/308 in Ep 14, 0.35s  train_loss:1.8934
+2020-12-01_02:53:32, Step 99/308 in Ep 14, 0.36s  train_loss:2.2013
+2020-12-01_02:53:39, Step 119/308 in Ep 14, 0.35s  train_loss:1.9997
+2020-12-01_02:53:46, Step 139/308 in Ep 14, 0.37s  train_loss:2.9711
+2020-12-01_02:53:54, Step 159/308 in Ep 14, 0.35s  train_loss:1.6370
+2020-12-01_02:54:01, Step 179/308 in Ep 14, 0.35s  train_loss:1.7437
+2020-12-01_02:54:08, Step 199/308 in Ep 14, 0.35s  train_loss:1.6068
+2020-12-01_02:54:15, Step 219/308 in Ep 14, 0.35s  train_loss:2.4358
+2020-12-01_02:54:22, Step 239/308 in Ep 14, 0.35s  train_loss:1.6221
+2020-12-01_02:54:29, Step 259/308 in Ep 14, 0.37s  train_loss:2.2176
+2020-12-01_02:54:36, Step 279/308 in Ep 14, 0.35s  train_loss:2.0358
+2020-12-01_02:54:43, Step 299/308 in Ep 14, 0.36s  train_loss:2.0474
+2020-12-01_02:54:46, Step 307/308 in Ep 14, 0.11s  train_loss:3.0567
+--------------------
+Epoch 14, LR 0.02184038101041813, Train_Time 109.83s, Loss: 1.9141
+write epoch: 14 train information 
+Evaluation on test set, 
+ ma: 0.8756,  pos_recall: 0.7800 , neg_recall: 0.9711 
+ Acc: 0.8208, Prec: 0.8506, Rec: 0.8891, F1: 0.8632
+2020-12-01_02:54:49
+------------------------------------------------------------
+2020-12-01_02:54:57, Step 19/308 in Ep 15, 0.36s  train_loss:2.1517
+2020-12-01_02:55:04, Step 39/308 in Ep 15, 0.35s  train_loss:2.0393
+2020-12-01_02:55:11, Step 59/308 in Ep 15, 0.35s  train_loss:2.3793
+2020-12-01_02:55:18, Step 79/308 in Ep 15, 0.36s  train_loss:1.6051
+2020-12-01_02:55:25, Step 99/308 in Ep 15, 0.36s  train_loss:2.0638
+2020-12-01_02:55:33, Step 119/308 in Ep 15, 0.36s  train_loss:2.4331
+2020-12-01_02:55:40, Step 139/308 in Ep 15, 0.36s  train_loss:2.1728
+2020-12-01_02:55:47, Step 159/308 in Ep 15, 0.36s  train_loss:1.2907
+2020-12-01_02:55:54, Step 179/308 in Ep 15, 0.36s  train_loss:2.4312
+2020-12-01_02:56:01, Step 199/308 in Ep 15, 0.36s  train_loss:1.4423
+2020-12-01_02:56:08, Step 219/308 in Ep 15, 0.35s  train_loss:1.1778
+2020-12-01_02:56:15, Step 239/308 in Ep 15, 0.36s  train_loss:2.3566
+2020-12-01_02:56:23, Step 259/308 in Ep 15, 0.36s  train_loss:2.5572
+2020-12-01_02:56:30, Step 279/308 in Ep 15, 0.36s  train_loss:1.6047
+2020-12-01_02:56:37, Step 299/308 in Ep 15, 0.36s  train_loss:1.0426
+2020-12-01_02:56:40, Step 307/308 in Ep 15, 0.11s  train_loss:2.2763
+--------------------
+Epoch 15, LR 0.01648859090830108, Train_Time 110.54s, Loss: 1.8307
+write epoch: 15 train information 
+Evaluation on test set, 
+ ma: 0.8779,  pos_recall: 0.7841 , neg_recall: 0.9717 
+ Acc: 0.8180, Prec: 0.8490, Rec: 0.8851, F1: 0.8606
+2020-12-01_02:56:43
+------------------------------------------------------------
+2020-12-01_02:56:52, Step 19/308 in Ep 16, 0.36s  train_loss:1.6322
+2020-12-01_02:56:59, Step 39/308 in Ep 16, 0.36s  train_loss:1.7095
+2020-12-01_02:57:06, Step 59/308 in Ep 16, 0.36s  train_loss:1.7575
+2020-12-01_02:57:13, Step 79/308 in Ep 16, 0.36s  train_loss:2.0656
+2020-12-01_02:57:20, Step 99/308 in Ep 16, 0.35s  train_loss:1.8225
+2020-12-01_02:57:27, Step 119/308 in Ep 16, 0.35s  train_loss:1.5315
+2020-12-01_02:57:34, Step 139/308 in Ep 16, 0.36s  train_loss:2.0179
+2020-12-01_02:57:42, Step 159/308 in Ep 16, 0.36s  train_loss:2.0893
+2020-12-01_02:57:49, Step 179/308 in Ep 16, 0.37s  train_loss:1.5226
+2020-12-01_02:57:56, Step 199/308 in Ep 16, 0.36s  train_loss:1.2471
+2020-12-01_02:58:03, Step 219/308 in Ep 16, 0.36s  train_loss:1.4655
+2020-12-01_02:58:10, Step 239/308 in Ep 16, 0.36s  train_loss:1.5434
+2020-12-01_02:58:17, Step 259/308 in Ep 16, 0.36s  train_loss:2.1433
+2020-12-01_02:58:24, Step 279/308 in Ep 16, 0.36s  train_loss:1.7422
+2020-12-01_02:58:32, Step 299/308 in Ep 16, 0.35s  train_loss:1.9471
+2020-12-01_02:58:34, Step 307/308 in Ep 16, 0.12s  train_loss:3.0779
+--------------------
+Epoch 16, LR 0.011715729752538102, Train_Time 111.18s, Loss: 1.7498
+write epoch: 16 train information 
+Evaluation on test set, 
+ ma: 0.8728,  pos_recall: 0.7755 , neg_recall: 0.9702 
+ Acc: 0.8101, Prec: 0.8410, Rec: 0.8795, F1: 0.8538
+2020-12-01_02:58:38
+------------------------------------------------------------
+2020-12-01_02:58:46, Step 19/308 in Ep 17, 0.36s  train_loss:1.3859
+2020-12-01_02:58:53, Step 39/308 in Ep 17, 0.35s  train_loss:1.4363
+2020-12-01_02:59:00, Step 59/308 in Ep 17, 0.36s  train_loss:2.6337
+2020-12-01_02:59:07, Step 79/308 in Ep 17, 0.35s  train_loss:2.1359
+2020-12-01_02:59:14, Step 99/308 in Ep 17, 0.36s  train_loss:2.2764
+2020-12-01_02:59:22, Step 119/308 in Ep 17, 0.36s  train_loss:1.4429
+2020-12-01_02:59:29, Step 139/308 in Ep 17, 0.36s  train_loss:1.4934
+2020-12-01_02:59:36, Step 159/308 in Ep 17, 0.36s  train_loss:1.1435
+2020-12-01_02:59:43, Step 179/308 in Ep 17, 0.36s  train_loss:1.5395
+2020-12-01_02:59:50, Step 199/308 in Ep 17, 0.36s  train_loss:1.4085
+2020-12-01_02:59:57, Step 219/308 in Ep 17, 0.36s  train_loss:2.3146
+2020-12-01_03:00:04, Step 239/308 in Ep 17, 0.35s  train_loss:1.5782
+2020-12-01_03:00:12, Step 259/308 in Ep 17, 0.37s  train_loss:1.0844
+2020-12-01_03:00:19, Step 279/308 in Ep 17, 0.36s  train_loss:1.6097
+2020-12-01_03:00:26, Step 299/308 in Ep 17, 0.35s  train_loss:1.5964
+2020-12-01_03:00:29, Step 307/308 in Ep 17, 0.11s  train_loss:2.4097
+--------------------
+Epoch 17, LR 0.0076393212250021065, Train_Time 110.71s, Loss: 1.6859
+write epoch: 17 train information 
+Evaluation on test set, 
+ ma: 0.8786,  pos_recall: 0.7848 , neg_recall: 0.9724 
+ Acc: 0.8217, Prec: 0.8535, Rec: 0.8864, F1: 0.8632
+2020-12-01_03:00:32
+------------------------------------------------------------
+2020-12-01_03:00:40, Step 19/308 in Ep 18, 0.36s  train_loss:1.5781
+2020-12-01_03:00:47, Step 39/308 in Ep 18, 0.36s  train_loss:1.6281
+2020-12-01_03:00:54, Step 59/308 in Ep 18, 0.36s  train_loss:1.8120
+2020-12-01_03:01:01, Step 79/308 in Ep 18, 0.36s  train_loss:1.1996
+2020-12-01_03:01:09, Step 99/308 in Ep 18, 0.36s  train_loss:1.5234
+2020-12-01_03:01:16, Step 119/308 in Ep 18, 0.35s  train_loss:1.8333
+2020-12-01_03:01:23, Step 139/308 in Ep 18, 0.36s  train_loss:1.7030
+2020-12-01_03:01:30, Step 159/308 in Ep 18, 0.36s  train_loss:1.7037
+2020-12-01_03:01:37, Step 179/308 in Ep 18, 0.36s  train_loss:1.5191
+2020-12-01_03:01:44, Step 199/308 in Ep 18, 0.36s  train_loss:1.2938
+2020-12-01_03:01:51, Step 219/308 in Ep 18, 0.35s  train_loss:1.8328
+2020-12-01_03:01:59, Step 239/308 in Ep 18, 0.36s  train_loss:1.8224
+2020-12-01_03:02:06, Step 259/308 in Ep 18, 0.36s  train_loss:1.7547
+2020-12-01_03:02:13, Step 279/308 in Ep 18, 0.36s  train_loss:1.6708
+2020-12-01_03:02:20, Step 299/308 in Ep 18, 0.36s  train_loss:1.9024
+2020-12-01_03:02:23, Step 307/308 in Ep 18, 0.11s  train_loss:3.0924
+--------------------
+Epoch 18, LR 0.004359740032465289, Train_Time 110.67s, Loss: 1.6436
+write epoch: 18 train information 
+Evaluation on test set, 
+ ma: 0.8862,  pos_recall: 0.8021 , neg_recall: 0.9704 
+ Acc: 0.8135, Prec: 0.8443, Rec: 0.8854, F1: 0.8577
+2020-12-01_03:02:26
+------------------------------------------------------------
+2020-12-01_03:02:36, Step 19/308 in Ep 19, 0.36s  train_loss:1.3406
+2020-12-01_03:02:43, Step 39/308 in Ep 19, 0.36s  train_loss:2.1557
+2020-12-01_03:02:50, Step 59/308 in Ep 19, 0.35s  train_loss:1.6909
+2020-12-01_03:02:58, Step 79/308 in Ep 19, 0.36s  train_loss:1.7864
+2020-12-01_03:03:05, Step 99/308 in Ep 19, 0.35s  train_loss:1.3870
+2020-12-01_03:03:12, Step 119/308 in Ep 19, 0.36s  train_loss:1.5013
+2020-12-01_03:03:19, Step 139/308 in Ep 19, 0.36s  train_loss:1.7449
+2020-12-01_03:03:26, Step 159/308 in Ep 19, 0.35s  train_loss:1.4601
+2020-12-01_03:03:33, Step 179/308 in Ep 19, 0.36s  train_loss:2.7177
+2020-12-01_03:03:40, Step 199/308 in Ep 19, 0.36s  train_loss:0.9734
+2020-12-01_03:03:48, Step 219/308 in Ep 19, 0.36s  train_loss:1.4262
+2020-12-01_03:03:55, Step 239/308 in Ep 19, 0.35s  train_loss:1.1868
+2020-12-01_03:04:02, Step 259/308 in Ep 19, 0.36s  train_loss:1.3956
+2020-12-01_03:04:09, Step 279/308 in Ep 19, 0.35s  train_loss:1.9986
+2020-12-01_03:04:16, Step 299/308 in Ep 19, 0.36s  train_loss:1.4977
+2020-12-01_03:04:19, Step 307/308 in Ep 19, 0.11s  train_loss:3.0742
+--------------------
+Epoch 19, LR 0.001957740348193859, Train_Time 112.11s, Loss: 1.5912
+write epoch: 19 train information 
+Evaluation on test set, 
+ ma: 0.8779,  pos_recall: 0.7844 , neg_recall: 0.9715 
+ Acc: 0.8176, Prec: 0.8487, Rec: 0.8848, F1: 0.8601
+2020-12-01_03:04:22
+------------------------------------------------------------
+PA100k,  best_metrc : 0.8862482807109624 in epoch18

@@ -1,0 +1,23 @@
+OrderedDict([('data_path', './data'),
+             ('dataset', 'duke'),
+             ('batch_size', 64),
+             ('num_workers', 4),
+             ('use_id', False),
+             ('lamba', 1.0),
+             ('debug', True),
+             ('train_epoch', 100),
+             ('height', 256),
+             ('width', 192),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', '2,3,4,5'),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU2,3,4,5 for training
+train set: duke trainval, test set: test

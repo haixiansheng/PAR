@@ -1,0 +1,133 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 64),
+             ('train_epoch', 10),
+             ('height', 256),
+             ('width', 192),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', ''),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(256, 192), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    RandomCrop(size=(256, 192), padding=None)
+    RandomHorizontalFlip(p=0.5)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+imgs_len: 2341
+label_len: 2341
+imgs_len: 2341
+label_len: 2341
+-------------------use cuda----------------- 
+2020-10-13_02:11:54, Step 19/37 in Ep 0, 0.25s  train_loss:0.3800
+2020-10-13_02:12:02, Step 36/37 in Ep 0, 0.16s  train_loss:0.1623
+--------------------
+Epoch 0, LR 0.08000000100000002, Train_Time 16.47s, Loss: 0.7439
+write epoch: 0 train information 
+Evaluation on test set, 
+ ma: 0.9718,  pos_recall: 0.9802 , neg_recall: 0.9634 
+ Acc: 0.5314, Prec: 0.5344, Rec: 0.5532, F1: 0.5397
+2020-10-13_02:12:12
+------------------------------------------------------------
+2020-10-13_02:12:21, Step 19/37 in Ep 1, 0.25s  train_loss:0.1331
+2020-10-13_02:12:28, Step 36/37 in Ep 1, 0.16s  train_loss:0.6100
+--------------------
+Epoch 1, LR 0.08000000100000002, Train_Time 16.39s, Loss: 0.2614
+write epoch: 1 train information 
+Evaluation on test set, 
+ ma: 0.9674,  pos_recall: 0.9542 , neg_recall: 0.9806 
+ Acc: 0.5276, Prec: 0.5312, Rec: 0.5372, F1: 0.5320
+2020-10-13_02:12:38
+------------------------------------------------------------
+2020-10-13_02:12:47, Step 19/37 in Ep 2, 0.25s  train_loss:0.2824
+2020-10-13_02:12:55, Step 36/37 in Ep 2, 0.16s  train_loss:0.1854
+--------------------
+Epoch 2, LR 0.07804226165180617, Train_Time 16.40s, Loss: 0.2228
+write epoch: 2 train information 
+Evaluation on test set, 
+ ma: 0.9867,  pos_recall: 0.9859 , neg_recall: 0.9876 
+ Acc: 0.5487, Prec: 0.5504, Rec: 0.5549, F1: 0.5513
+2020-10-13_02:13:05
+------------------------------------------------------------
+2020-10-13_02:13:14, Step 19/37 in Ep 3, 0.25s  train_loss:0.1350
+2020-10-13_02:13:21, Step 36/37 in Ep 3, 0.16s  train_loss:0.1079
+--------------------
+Epoch 3, LR 0.07236068077499791, Train_Time 16.42s, Loss: 0.1713
+write epoch: 3 train information 
+Evaluation on test set, 
+ ma: 0.9834,  pos_recall: 0.9725 , neg_recall: 0.9943 
+ Acc: 0.5457, Prec: 0.5500, Rec: 0.5485, F1: 0.5481
+2020-10-13_02:13:32
+------------------------------------------------------------
+2020-10-13_02:13:41, Step 19/37 in Ep 4, 0.25s  train_loss:0.1003
+2020-10-13_02:13:48, Step 36/37 in Ep 4, 0.16s  train_loss:0.0454
+--------------------
+Epoch 4, LR 0.06351141109169893, Train_Time 16.39s, Loss: 0.1277
+write epoch: 4 train information 
+Evaluation on test set, 
+ ma: 0.9926,  pos_recall: 0.9930 , neg_recall: 0.9922 
+ Acc: 0.5540, Prec: 0.5555, Rec: 0.5585, F1: 0.5560
+2020-10-13_02:13:58
+------------------------------------------------------------
+2020-10-13_02:14:07, Step 19/37 in Ep 5, 0.25s  train_loss:0.0431
+2020-10-13_02:14:15, Step 36/37 in Ep 5, 0.17s  train_loss:0.2077
+--------------------
+Epoch 5, LR 0.052360680774997906, Train_Time 16.52s, Loss: 0.0896
+write epoch: 5 train information 
+Evaluation on test set, 
+ ma: 0.9940,  pos_recall: 0.9960 , neg_recall: 0.9921 
+ Acc: 0.5551, Prec: 0.5555, Rec: 0.5596, F1: 0.5567
+2020-10-13_02:14:25
+------------------------------------------------------------
+2020-10-13_02:14:34, Step 19/37 in Ep 6, 0.25s  train_loss:0.0462
+2020-10-13_02:14:42, Step 36/37 in Ep 6, 0.16s  train_loss:0.0338
+--------------------
+Epoch 6, LR 0.04000000100000001, Train_Time 16.38s, Loss: 0.0816
+write epoch: 6 train information 
+Evaluation on test set, 
+ ma: 0.9925,  pos_recall: 0.9903 , neg_recall: 0.9947 
+ Acc: 0.5549, Prec: 0.5564, Rec: 0.5568, F1: 0.5560
+2020-10-13_02:14:52
+------------------------------------------------------------
+2020-10-13_02:15:01, Step 19/37 in Ep 7, 0.25s  train_loss:0.1839
+2020-10-13_02:15:08, Step 36/37 in Ep 7, 0.17s  train_loss:0.0691
+--------------------
+Epoch 7, LR 0.02763932122500211, Train_Time 16.40s, Loss: 0.1053
+write epoch: 7 train information 
+Evaluation on test set, 
+ ma: 0.9936,  pos_recall: 0.9935 , neg_recall: 0.9937 
+ Acc: 0.5553, Prec: 0.5560, Rec: 0.5581, F1: 0.5565
+2020-10-13_02:15:18
+------------------------------------------------------------
+2020-10-13_02:15:27, Step 19/37 in Ep 8, 0.25s  train_loss:0.0237
+2020-10-13_02:15:34, Step 36/37 in Ep 8, 0.16s  train_loss:0.0218
+--------------------
+Epoch 8, LR 0.01648859090830108, Train_Time 16.36s, Loss: 0.0823
+write epoch: 8 train information 
+Evaluation on test set, 
+ ma: 0.9939,  pos_recall: 0.9947 , neg_recall: 0.9931 
+ Acc: 0.5553, Prec: 0.5560, Rec: 0.5589, F1: 0.5567
+2020-10-13_02:15:44
+------------------------------------------------------------
+2020-10-13_02:15:53, Step 19/37 in Ep 9, 0.25s  train_loss:0.0847
+2020-10-13_02:16:01, Step 36/37 in Ep 9, 0.16s  train_loss:0.0265
+--------------------
+Epoch 9, LR 0.0076393212250021065, Train_Time 16.38s, Loss: 0.0678
+write epoch: 9 train information 
+Evaluation on test set, 
+ ma: 0.9936,  pos_recall: 0.9935 , neg_recall: 0.9937 
+ Acc: 0.5553, Prec: 0.5564, Rec: 0.5585, F1: 0.5567
+2020-10-13_02:16:11
+------------------------------------------------------------
+PA100k,  best_metrc : 0.9940352491653024 in epoch5

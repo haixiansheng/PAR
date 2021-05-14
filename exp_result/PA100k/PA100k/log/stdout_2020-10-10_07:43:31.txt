@@ -1,0 +1,54 @@
+OrderedDict([('dataset', 'PA100k'),
+             ('debug', True),
+             ('batchsize', 72),
+             ('train_epoch', 50),
+             ('height', 256),
+             ('width', 192),
+             ('lr_ft', 0.01),
+             ('lr_new', 0.1),
+             ('classifier', 'base'),
+             ('momentum', 0.9),
+             ('weight_decay', 0.0005),
+             ('train_split', 'trainval'),
+             ('valid_split', 'test'),
+             ('device', ''),
+             ('redirector', True),
+             ('use_bn', True)])
+------------------------------------------------------------
+use GPU for training
+train set: PA100k trainval, test set: test
+Compose(
+    Resize(size=(256, 192), interpolation=PIL.Image.BILINEAR)
+    Pad(padding=10, fill=0, padding_mode=constant)
+    RandomCrop(size=(256, 192), padding=None)
+    RandomHorizontalFlip(p=0.5)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+111 90000
+91809
+91809
+./data_hh/3-calling&smoking/D10_20200921141833_00722_person2.jpg
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1.]
+111 10000
+10000
+10000
+100000.jpg
+[0. 0. 1. 1. 1. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0.]
+trainval set: 91809, test set: 10000, attr_num : 18
+-------------------use cuda----------------- 
+2020-10-10_07:44:44, Step 19/1276 in Ep 0, 0.29s  train_loss:10.4467
+2020-10-10_07:44:54, Step 39/1276 in Ep 0, 0.29s  train_loss:7.8868
+2020-10-10_07:45:03, Step 59/1276 in Ep 0, 0.29s  train_loss:7.1770
+2020-10-10_07:45:13, Step 79/1276 in Ep 0, 0.29s  train_loss:6.7825
+2020-10-10_07:45:23, Step 99/1276 in Ep 0, 0.29s  train_loss:5.5953
+2020-10-10_07:45:33, Step 119/1276 in Ep 0, 0.29s  train_loss:5.8482
+2020-10-10_07:45:42, Step 139/1276 in Ep 0, 0.29s  train_loss:5.5385
+2020-10-10_07:45:52, Step 159/1276 in Ep 0, 0.29s  train_loss:6.4243
+2020-10-10_07:46:01, Step 179/1276 in Ep 0, 0.29s  train_loss:5.7791
+2020-10-10_07:46:11, Step 199/1276 in Ep 0, 0.29s  train_loss:6.2610
+2020-10-10_07:46:21, Step 219/1276 in Ep 0, 0.29s  train_loss:5.8828
+2020-10-10_07:46:31, Step 239/1276 in Ep 0, 0.29s  train_loss:5.1311
+2020-10-10_07:46:40, Step 259/1276 in Ep 0, 0.29s  train_loss:4.9734
+2020-10-10_07:46:50, Step 279/1276 in Ep 0, 0.29s  train_loss:4.6005
+2020-10-10_07:47:01, Step 299/1276 in Ep 0, 0.29s  train_loss:5.5949
